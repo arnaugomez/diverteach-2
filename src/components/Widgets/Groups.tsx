@@ -6,7 +6,7 @@ const Groups: React.FC<{index: number}> = ({index}) => {
     <Widget index={index}>
       Aquesta eina estarà disponible en la propera versió de DiverTeach. <br />{' '}
       Hi estem treballant i tenim moltes ganes que la provis quan estigui
-      llesta!
+      a punt!
     </Widget>
   );
 };

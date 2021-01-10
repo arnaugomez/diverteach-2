@@ -67,7 +67,7 @@ const Home = () => {
             <span className="list-icon" role="img" aria-label="">
               🎨
             </span>
-            Pissarra digital <Tag type="inverted">PROPERAMENT</Tag>
+            Pissarra digital
           </li>
           <li>
             <span className="list-icon" role="img" aria-label="">
