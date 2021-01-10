@@ -8,3 +8,19 @@
   overflow-y: scroll;
   background-image: url(https://i.imgur.com/pq9upOY.png);
 }
+
+.dashboard__welcome-message{
+  width: 90%;
+  max-width: 600px;
+  padding: 2rem;
+  background-color: var(--dominant);
+  border-radius: 1.5rem;
+}
+.dashboard__welcome-message ol {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.dashboard__welcome-message__emojis{
+  font-size: 140%;
+}

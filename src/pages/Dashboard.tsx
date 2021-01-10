@@ -27,24 +27,54 @@ interface Props {
 const Dashboard: React.FC<Props> = ({widgetList, addWidget}) => {
   return (
     <Page className="dashboard">
-      {widgetList
-        ? widgetList.map((item, index) => {
-            switch (item.name) {
-              case 'clock':
-                return <Clock key={index} index={index} />;
-              case 'groups':
-                return <Groups key={index} index={index} />;
-              case 'notes':
-                return <Notes key={index} index={index} />;
-              case 'silence':
-                return <Silence key={index} index={index} />;
-              case 'whiteboard':
-                return <Whiteboard key={index} index={index} />;
-              default:
-                return null;
-            }
-          })
-        : null}
+      {widgetList.length !== 0 ? (
+        widgetList.map((item, index) => {
+          switch (item.name) {
+            case 'clock':
+              return <Clock key={index} index={index} />;
+            case 'groups':
+              return <Groups key={index} index={index} />;
+            case 'notes':
+              return <Notes key={index} index={index} />;
+            case 'silence':
+              return <Silence key={index} index={index} />;
+            case 'whiteboard':
+              return <Whiteboard key={index} index={index} />;
+            default:
+              return null;
+          }
+        })
+      ) : (
+        <section className="absolute-center dashboard__welcome-message">
+          <h3 className="text-center">
+            <span className="dashboard__welcome-message__emojis">
+              👩‍🏫 👨‍🏫 ✨
+            </span>
+            <br />
+            Tan fàcil que sembla un joc!
+          </h3>
+          <ol>
+            <li>
+              <span className="list-icon" role="img" aria-label="">
+                👉
+              </span>{' '}
+              Clica les icones del menú i afegeix tantes eines com vulguis
+            </li>
+            <li>
+              <span className="list-icon" role="img" aria-label="">
+                👋
+              </span>{' '}
+              Arrossega cada eina per moure-la{' '}
+              <span role="img" aria-label="">
+                ↔️
+              </span>{' '}
+              <span role="img" aria-label="">
+                ↕️
+              </span>
+            </li>
+          </ol>
+        </section>
+      )}
       <Menu>
         <MenuItem
           onClick={() => addWidget('clock')}

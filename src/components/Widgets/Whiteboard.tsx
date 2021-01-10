@@ -3,10 +3,7 @@ import React from 'react';
 import './Whiteboard.css';
 import Widget from './Widget';
 
-
-const Whiteboard = ({index}) => {
-  
-
+const Whiteboard: React.FC<{index: number}> = ({index}) => {
   return (
     <Widget className="whiteboard" fixedPosition index={index}>
       <iframe
