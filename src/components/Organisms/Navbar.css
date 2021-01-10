@@ -12,6 +12,10 @@
   align-items: center;
   background-color: white;
 }
+.navbar--dashboard{
+  border: solid 2px var(--secondary);
+  border-top: none;
+}
 .navbar__left{
   display: flex;
   justify-content: space-between;

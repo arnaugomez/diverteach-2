@@ -4,10 +4,12 @@ import './Dashboard.css';
 import Page from '../components/Atoms/Page';
 import Menu from '../components/Organisms/Menu';
 import MenuItem from '../components/Molecules/MenuItem';
+import Widget from '../components/Widgets/Widget';
 
 const Dashboard = () => {
   return (
     <Page className="dashboard">
+      <Widget>I'm a widget</Widget>
       <Menu>
         <MenuItem icon="⏰" description="Temporitzador" />
         <MenuItem icon="🎨" description="Pissarra Digital" />

@@ -1,0 +1,40 @@
+.widget {
+  position: absolute;
+  max-width: 100%;
+  background-color: var(--dominant);
+  padding: 1rem;
+  border-radius: 1rem;
+  padding-top: 2.5rem;
+  border: solid 2px var(--secondary);
+  margin-top: 1rem;
+}
+.widget__move-icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+  stroke: var(--secondary);
+}
+.widget__close-icon{
+  position: absolute;
+  top: 0;
+  right: 0;
+  stroke: var(--accent);
+}
+.widget__icon {
+  transition: transform 0.2s ease-in-out;
+}
+.widget__close-icon:hover {
+  transform: scale(1.1);
+}
+.widget__move-icon:hover {
+  transform: scale(1.1) rotate(45deg);
+}
+
+@media (max-width: 800px){
+  .widget {
+    position: relative;
+    max-width: 100%;
+  }
+  
+}
