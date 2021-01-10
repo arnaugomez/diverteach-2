@@ -10,6 +10,7 @@ import './Widget.css';
 
 interface Props {
   index: number;
+  fixedPosition?: boolean;
   className?: string;
   positionX?: number;
   positionY?: number;
@@ -20,6 +21,7 @@ interface Props {
 
 const Widget: React.FC<Props> = ({
   index,
+  fixedPosition,
   className,
   positionX,
   positionY,
@@ -29,7 +31,44 @@ const Widget: React.FC<Props> = ({
 }) => {
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
-
+  if (fixedPosition) {
+    return (
+      <article className={'widget--fixed ' + className}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="widget__move-icon widget__icon"
+          width="44"
+          height="44"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <polyline points="8 9 12 5 16 9" />
+          <polyline points="16 15 12 19 8 15" />
+        </svg>
+        <svg
+          onClick={() => removeWidget(index)}
+          xmlns="http://www.w3.org/2000/svg"
+          className="widget__close-icon widget__icon"
+          width="44"
+          height="44"
+          viewBox="0 -5 24 34"
+          strokeWidth="2"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+        {children}
+      </article>
+    );
+  }
   if (windowWidth > 800) {
     return (
       <motion.article
@@ -40,7 +79,7 @@ const Widget: React.FC<Props> = ({
         }}
         dragConstraints={{
           top: 50,
-          bottom: windowHeight - 200,
+          bottom: windowHeight - 300,
           left: 100,
           right: windowWidth - 200,
         }}

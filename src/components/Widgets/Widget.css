@@ -8,6 +8,17 @@
   border: solid 2px var(--secondary);
   margin-top: 1rem;
 }
+.widget--fixed {
+  position: relative;
+  margin: auto;
+  max-width: 100%;
+  background-color: var(--dominant);
+  padding: 1rem;
+  border-radius: 1rem;
+  padding-top: 3rem;
+  border: solid 2px var(--secondary);
+  margin-top: 1rem;
+}
 .widget__move-icon{
   position: absolute;
   top: 0;
@@ -34,7 +45,6 @@
 @media (max-width: 800px){
   .widget {
     position: relative;
-    max-width: 100%;
   }
   
 }

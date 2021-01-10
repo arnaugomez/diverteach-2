@@ -60,8 +60,8 @@ const Notes: React.FC<{index: number}> = ({index}) => {
 
       {notesList
         .filter((_item, index) => index === currentNote)
-        .map((item) => (
-          <section>
+        .map((item, index) => (
+          <section key={index}>
             <h3>
               <input
                 style={{color: item.color}}
@@ -69,7 +69,7 @@ const Notes: React.FC<{index: number}> = ({index}) => {
                 onChange={(e) => {
                   setNotesList(
                     notesList.map((item, index) => {
-                      if (index == currentNote) {
+                      if (index === currentNote) {
                         return {
                           ...item,
                           title: e.target.value,
@@ -88,7 +88,7 @@ const Notes: React.FC<{index: number}> = ({index}) => {
               onChange={(e) => {
                 setNotesList(
                   notesList.map((item, index) => {
-                    if (index == currentNote) {
+                    if (index === currentNote) {
                       return {
                         ...item,
                         content: e.target.value,
