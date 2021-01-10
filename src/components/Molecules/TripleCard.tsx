@@ -1,5 +1,4 @@
 import React from 'react'
-import Card from '../Atoms/Card'
 
 import './TripleCard.css'
 

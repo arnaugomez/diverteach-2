@@ -49,6 +49,7 @@ const Clock: React.FC<{index: number}> = ({index}) => {
       setClockRinging(true);
     }
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isActive, time]);
 
   return (
