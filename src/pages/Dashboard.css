@@ -4,9 +4,13 @@
   padding-top: 5rem;
   padding-right: 1rem;
   padding-left: 1rem;
-  padding-bottom: 6rem;
+  padding-bottom: 0rem;
   overflow-y: scroll;
   background-image: url(https://i.imgur.com/pq9upOY.png);
+}
+.dashboard__dumbie{
+  position: relative;
+  height: 6rem;
 }
 
 .dashboard__welcome-message{

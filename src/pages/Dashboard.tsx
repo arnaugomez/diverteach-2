@@ -75,6 +75,7 @@ const Dashboard: React.FC<Props> = ({widgetList, addWidget}) => {
           </ol>
         </section>
       )}
+      <div className="dashboard__dumbie" />
       <Menu>
         <MenuItem
           onClick={() => addWidget('clock')}
