@@ -84,7 +84,7 @@ const Dashboard: React.FC<Props> = ({widgetList, addWidget}) => {
         <MenuItem
           onClick={() => addWidget('whiteboard')}
           icon="🎨"
-          description="Pissarra Digital"
+          description="Pissarra"
         />
         <MenuItem
           onClick={() => addWidget('groups')}
