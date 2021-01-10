@@ -1,0 +1,7 @@
+const types = {
+  ADD_WIDGET: 'ADD WIDGET',
+  REMOVE_WIDGET: 'REMOVE_WIDGET',
+  UPDATE_WIDGET_POSITION: 'UPDATE_WIDGET_POSITION'
+}
+
+export default types

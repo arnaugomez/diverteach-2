@@ -1,24 +1,39 @@
 import React from 'react';
 import {motion} from 'framer-motion';
+import {connect} from 'react-redux';
 
+import {removeWidget, updateWidgetPosition} from '../../redux/actions/widgetList'
 import './Widget.css';
 
-const Widget: React.FC<{children: React.ReactNode}> = ({children}) => {
+interface Props {
+  index: number,
+  positionX?: number,
+  positionY?: number,
+  children: React.ReactNode;
+  removeWidget?: any;
+  updateWidgetPosition?: any,
+}
+
+const Widget: React.FC<Props> = ({index, positionX, positionY, children, removeWidget, updateWidgetPosition}) => {
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
+  
   if (windowWidth > 800) {
     return (
       <motion.article
         drag
-        animate={{
-          x: windowWidth / 2 + 200 - Math.floor(Math.random() * 400),
-          y: windowHeight / 2 + 150 - Math.floor(Math.random() * 300),
+        initial={{
+          x: positionX,
+          y: positionY,
         }}
         dragConstraints={{
-          top: 100,
+          top: 50,
           bottom: windowHeight - 200,
           left: 100,
           right: windowWidth - 200,
+        }}
+        onDragEnd={(event, info) => {
+          updateWidgetPosition(index, info.point.x, info.point.y)
         }}
         dragMomentum={false}
         className="widget"
@@ -39,6 +54,7 @@ const Widget: React.FC<{children: React.ReactNode}> = ({children}) => {
           <polyline points="16 15 12 19 8 15" />
         </svg>
         <svg
+          onClick={() => removeWidget(index)}
           xmlns="http://www.w3.org/2000/svg"
           className="widget__close-icon widget__icon"
           width="44"
@@ -75,6 +91,7 @@ const Widget: React.FC<{children: React.ReactNode}> = ({children}) => {
         <polyline points="16 15 12 19 8 15" />
       </svg>
       <svg
+        onClick={() => removeWidget(index)}
         xmlns="http://www.w3.org/2000/svg"
         className="widget__close-icon widget__icon"
         width="44"
@@ -94,4 +111,9 @@ const Widget: React.FC<{children: React.ReactNode}> = ({children}) => {
   );
 };
 
-export default Widget;
+const mapStateToProps = (state:any, ownProps:Props) => ({
+  positionX: state.widgetList[ownProps.index].positionX,
+  positionY: state.widgetList[ownProps.index].positionY
+})
+
+export default connect(mapStateToProps, {removeWidget, updateWidgetPosition})(Widget);
