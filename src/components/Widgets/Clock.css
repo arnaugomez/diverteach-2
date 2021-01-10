@@ -1,0 +1,40 @@
+.clock {
+  width: 100%;
+  max-width: 600px;
+}
+.clock__top-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock__icon{
+  display: block;
+  transition: transform 0.2s ease-in-out;
+  margin: 0 0.5rem;
+}
+.clock__icon:hover {
+  transform: scale(1.1);
+}
+.clock__display{
+  font-size: 5rem;
+  margin: 0;
+}
+.clock__ringing-clock-icon{
+  line-height: 1.3;
+  animation: clock-move 0.05s ease-in-out infinite alternate;
+}
+
+.clock__middle-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes clock-move {
+  from {
+    transform: rotate(-10deg)
+  }
+  to {
+    transform: rotate(10deg)
+  }
+}

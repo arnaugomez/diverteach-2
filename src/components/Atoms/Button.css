@@ -1,5 +1,6 @@
 .button {
-  display: inline;
+  display: inline-flex;
+  align-items: center;
   padding: 10px 16px;
   font-weight: bold;
   color: var(--dominant);

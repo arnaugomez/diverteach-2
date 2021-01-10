@@ -44,7 +44,7 @@ const Notes: React.FC<{index: number}> = ({index}) => {
           width="30"
           height="30"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke={notesList[notesList.length - 1].color}
           fill="none"
           strokeLinecap="round"
