@@ -23,6 +23,15 @@ input[type='reset'] {
   cursor: pointer;
   outline: inherit;
 }
+input, textarea {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
 
 a {
   color: inherit; /* blue colors for links too */
