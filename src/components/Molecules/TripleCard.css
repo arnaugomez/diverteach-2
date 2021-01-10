@@ -1,0 +1,12 @@
+.triple-card__container {
+  position: relative;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+}
+@media(max-width: 800px){
+  .triple-card__container {
+    display: block;
+  }
+}

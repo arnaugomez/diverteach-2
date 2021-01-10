@@ -1,0 +1,20 @@
+.hero-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem 1rem 0rem 1rem;
+}
+.hero-section--columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+}
+@media (max-width: 800px) {
+  .hero-section{
+    padding: 0rem 1rem 1rem 1rem;
+  }
+  .hero-section--columns {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

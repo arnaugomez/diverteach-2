@@ -1,0 +1,17 @@
+
+.list-icon{
+  margin-right: 1rem;
+}
+
+
+@media (max-width: 800px) {
+  .home__superhero-image-container {
+    height: 45vh;
+  }
+  .home__hero-section-1 {
+    position: relative;
+    z-index: 3;
+    background-color: var(--dominant);
+    box-shadow: 0 0 20px 20px var(--dominant);
+  }
+}

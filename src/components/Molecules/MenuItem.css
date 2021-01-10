@@ -1,0 +1,25 @@
+.menu-item {
+  text-align: center;
+}
+.menu-item__icon {
+  display: block;
+  margin: 0;
+  font-size: 3rem;
+}
+.menu-item__icon-container {
+  transition: transform 0.2s ease-in-out;
+}
+.menu-item__icon-container:hover {
+  transform: scale(1.2);
+}
+.menu-item__description {
+  margin: 0;
+}
+@media (max-width: 800px) {
+  .menu-item__icon {
+    font-size: 2.5rem;
+  }
+  .menu-item__description {
+    display: none;
+  }
+}

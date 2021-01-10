@@ -1,0 +1,23 @@
+.middle-hero {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  color: var(--dominant);
+  font-weight: bold;
+}
+.middle-hero__container {
+  width: 100%;
+  display: block;
+  background-color: var(--secondary);
+  margin: -1px 0;
+}
+.middle-hero__svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 1000px;
+}
+.middle-hero__svg__fill {
+  fill: var(--secondary);
+}
+

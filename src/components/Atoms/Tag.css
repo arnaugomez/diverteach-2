@@ -1,0 +1,16 @@
+.tag {
+  padding: 0.3rem;
+  margin: 0 0.5rem;
+  font-size: 80%;
+  border-radius: 0.3rem;
+}
+.tag--success{
+  background-color: var(--secondary)
+}
+.tag--failure{
+  background-color: var(--accent)
+}
+.tag--inverted{
+  color: #2b2b2b;
+  background-color: var(--dominant);
+}
